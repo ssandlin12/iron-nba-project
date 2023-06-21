@@ -4,12 +4,29 @@
   <div class="card">
     <img
       class="card-img-top"
-      src="https://media.cnn.com/api/v1/images/stellar/prod/230523093708-01-lebron-james-052223.jpg"
-      alt="Lebron James"
-    />
+      src="{{this.photo}}"
+      alt="{{this.name}} {{this.lastName}}"/>
     <div class="card-body">
-      <h5 class="card-title">Lebron James</h5>
-      <p class="card-text">CLE</p>
+      <h5 class="card-title">{{this.name}} {{this.lastName}}</h5>
+      <p class="card-text">{{this.team}}</p>
+      <h5>
+        <div class="row">
+          <div class="col-md-6">
+            <p>Year</p>
+          </div>
+          <div class="col-md-6">
+            <p>Average</p>
+          </div>
+          {{#each average}}
+            <div class="col-md-6">
+              <p>{{year}}</p>
+            </div>
+            <div class="col-md-6">
+              <p>{{points}}</p>
+            </div>
+          {{/each}}
+        </div>
+      </h5>
     </div>
   </div>
 </div>
